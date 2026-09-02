@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Shaurya Baranwal</title>
+<meta name="description" content="alex rivera — product engineer. frontend systems, design engineering, developer tools." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a1a2f;
+    --text: #e8eef6;
+    --muted: #7f93ad;
+    --accent: #6fb3ff;
+    --line: rgba(255,255,255,0.1);
+    --mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--mono);
+    min-height: 100vh;
+    font-size: 15px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+  }
+
+  .wrap {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 80px 24px 60px;
+  }
+
+  a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-decoration-color: rgba(111,179,255,0.35);
+    text-underline-offset: 3px;
+    transition: text-decoration-color 0.15s ease, color 0.15s ease;
+  }
+  a:hover { text-decoration-color: var(--accent); }
+  a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  h1.name {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin: 0 0 14px;
+    color: var(--text);
+  }
+
+  .linkrow { margin: 0 0 28px; color: var(--muted); }
+  .linkrow a { margin-right: 4px; }
+  .linkrow span.sep { color: var(--line); margin: 0 8px; }
+
+  .lede { color: var(--text); margin: 0 0 8px; max-width: 54ch; }
+  .lede.spaced { margin-bottom: 28px; }
+  .muted { color: var(--muted); }
+
+  h2.h {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--muted);
+    text-transform: lowercase;
+    letter-spacing: 0.02em;
+    margin: 0 0 14px;
+    padding-top: 34px;
+    border-top: 1px solid var(--line);
+  }
+  section:first-of-type h2.h { border-top: none; padding-top: 0; }
+
+  ul.list { list-style: none; margin: 0; padding: 0; }
+  ul.list li {
+    position: relative;
+    padding-left: 16px;
+    margin-bottom: 10px;
+    color: var(--text);
+    max-width: 56ch;
+  }
+  ul.list li::before {
+    content: "-";
+    position: absolute;
+    left: 0;
+    color: var(--muted);
+  }
+  ul.list li:last-child { margin-bottom: 0; }
+  ul.list .note { color: var(--muted); }
+
+  footer {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    color: var(--line);
+    font-size: 13px;
+  }
+
+  @media (max-width: 480px) {
+    .wrap { padding: 56px 20px 40px; }
+    h1.name { font-size: 20px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    a { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="wrap">
+
+    <!-- header -->
+    <h1 class="name">Shaurya Baranwal</h1>
+
+    <!-- about -->
+    <section> 
+        <p> 
+            Solving complex problems at the intersection of Software Engineering and AI/ML. Rutgers CS, Math, and Quantitative Finance graduate. I'm always eager to connect, learn, and grow, so feel free to reach out!
+        </p>
+    </section>
+
+    <!-- exeperience -->
+    <section> 
+        <h2 class="h">experience</h2>
+        <ul class="list">
+          <li>
+            <a href="https://www.cs.rutgers.edu/"><strong>rutgers cs</strong></a> — prev research assistant, course assistant
+          </li>
+          <li>
+            <a href="https://beunec.co/">beunec</a> — prev swe intern
+          </li>
+        </ul>
+      </section>
+
+    <!-- projects -->
+    <section>
+      <h2 class="h">projects</h2>
+      <ul class="list">
+        <li><a href="https://github.com">quietly</a> <span class="note">— a minimal reading-list app. no feeds, no likes — just what you saved.</span></li>
+        <li><a href="https://github.com">fieldnote</a> <span class="note">— offline-first notes for researchers in low-connectivity areas.</span></li>
+        <li><a href="https://github.com">palette</a> <span class="note">— generates accessible color systems from a single brand color.</span></li>
+      </ul>
+    </section>
+
+    <!-- info -->
+    <section>
+      <h2 class="h">info</h2>
+      <ul class="list">
+        <li><a href="https://www.linkedin.com/in/shaurya-baranwal-954b52248/"> linkedin </a></li>
+        <li><a href="https://github.com/ShorShor25"> github </a></li>
+        <li><a href="mailto:shaurya2225@gmail.com">shaurya2225@gmail.com</a>.</li>
+        <li>nyc metropolitan area</li>
+      </ul>
+    </section>
+
+    <footer>&copy; <span id="year"></span> shaurya baranwal.</footer>
+
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
